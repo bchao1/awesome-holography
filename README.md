@@ -20,7 +20,7 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 - [Toward the next-generation VR/AR optics: a review of holographic near-eye displays from a human-centric perspective](https://opg.optica.org/optica/fulltext.cfm?uri=optica-7-11-1563&id=442336) (Chang et al. 2020)
 - [Deep learning in holography and coherent imaging](https://www.nature.com/articles/s41377-019-0196-0) (Rivenson et al. 2019)
 
-## Computer Generated Holography (CGH) for Coherent Light
+## Computer Generated Holography (CGH) for Coherent Light and 
 
 ### Heuristic-based Methods
 #### Double Phase Encoding
@@ -51,8 +51,6 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021)
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (Shi et al. 2021)
-
-
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (Eybposh et al. 2020)
 - [Deep neural network for multi-depth hologram generation and its training strategy](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-27137&id=437709) (Lee et al. 2020)
