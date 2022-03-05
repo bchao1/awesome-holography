@@ -22,11 +22,16 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 ## Computer Generated Holography (CGH)
 
 ### Traditional Heuristic Methods
-#### Double Phase Encoding
-- [Computer-generated double-phase holograms](https://opg.optica.org/ao/abstract.cfm?uri=ao-17-24-3874) (Hsueh et al. 1978) proposed to decompose a complex field into two phase-only components to generate holograms using phase-only SLMs.
-- [Holographic Near-Eye Displays for Virtual and Augmented Reality](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/holo_author.pdf) (Maimone et al. 2017) proposed a holographic near-eye display system based on the double phase encoding scheme.
 
 #### Point-based Methods
+
+Some methods are based on the double phase encoding scheme, where two phase-only modulation patterns are interleaved on a single SLM:
+
+- [Computer-generated double-phase holograms](https://opg.optica.org/ao/abstract.cfm?uri=ao-17-24-3874) (Hsueh et al. 1978) proposed to decompose a complex field into two phase-only components to generate holograms using a single phase-only SLM.
+- [Holographic Near-Eye Displays for Virtual and Augmented Reality](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/holo_author.pdf) (Maimone et al. 2017) proposed a holographic near-eye display system based on the double phase encoding scheme.
+
+Others:
+- [Near-eye Light Field Holographic Rendering with Spherical Waves for Wide Field of View Interactive 3D Computer Graphics](https://people.csail.mit.edu/liangs/papers/ToG17.pdf) (Shi et al. 2017)
 
 #### Polygon/Mesh-based Methods
 - [Computer-generated holograms of 3-D objects composed of tilted planar segments](https://opg.optica.org/ao/abstract.cfm?uri=ao-27-14-3020) (Leseberg et al. 1988)
@@ -49,15 +54,20 @@ A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm*
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
 
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (Chen et al. 2021)
-- [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimized the phase-only hologram using closed-form Wirtinger complex derivatives.
+- [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimized the phase-only SLM pattern using closed-form Wirtinger complex derivatives.
 - [3D computer-generated holography by non-convex optimization](https://opg.optica.org/optica/fulltext.cfm?uri=optica-4-10-1306&id=375391) (Zhang et al. 2017)
 
 
 ### Data-driven (Learning-based) Methods
+
+Recent advances in ML for CGH is focused on learning an accurate wave propagation model for holographic displays:
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021)
-- [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (Shi et al. 2021)
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
+
+- [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (Shi et al. 2021)
+
+
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (Eybposh et al. 2020)
 - [Deep neural network for multi-depth hologram generation and its training strategy](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-27137&id=437709) (Lee et al. 2020)
 - [Deep-learning-generated holography](https://opg.optica.org/ao/abstract.cfm?uri=ao-57-14-3859) (Horisaki et al. 2018)
