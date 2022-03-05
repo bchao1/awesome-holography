@@ -45,7 +45,7 @@ Others methods include:
 #### Layer-based Methods
 
 ### Iterative Methods
-A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm** where the phase and amplitute patterns at two planes are updated iteratively as the wave is propagated back and forth:
+A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm** where the phase and amplitute patterns at two planes are updated iteratively as the wave propagates back and forth between the two planes:
 
 - [A practical algorithm for the determination of phase from image and diffraction plane pictures](http://www.u.arizona.edu/~ppoon/GerchbergandSaxton1972.pdf) (Gerchberg et al. 1972) proposed the **Gerchberg-Saxton (GS) Algorithm**
 - [Mix-and-Match Holography](http://www.cs.ubc.ca/labs/imager/tr/2017/MixMatchHolography/MixMatchHolography_YPeng_SA17_LowRes.pdf) (Peng et al. 2017) proposed an interative phase-retrieval method built upon GS
@@ -54,16 +54,16 @@ A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm*
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
 
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (Chen et al. 2021)
-- [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimized the phase-only SLM pattern using closed-form Wirtinger complex derivatives.
+- [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimizes the phase-only SLM pattern using closed-form Wirtinger complex derivatives.
 - [3D computer-generated holography by non-convex optimization](https://opg.optica.org/optica/fulltext.cfm?uri=optica-4-10-1306&id=375391) (Zhang et al. 2017)
 
 
 ### Data-driven (Learning-based) Methods
 
 Recent advances in deep learning for CGH leverages camera-in-the-loop (CITL) training to learn an accurate free space wave propagation and optical hardware model for holographic displays:
-- [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
-- [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021)
-- [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
+- [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020) is the first to use **camera-in-the-loop training (CITL)** to optimize a parameterized wave propagation model, where optical aberrations, SLM non-linearities, and etc are learned from data. A CNN is also proposed to synthesize 2D and 3D holograms in real-time. 
+- [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021) uses two CNNs to directly model optical aberrations, SLM non-linearities, and etc, at the input plane and **multiple** target planes. The usage of two CNNs introduces more degrees of freedom than that of the parameterized propagation model proposed in Peng et al. 2020, such that higher quality 3D holograms can be achieved.
+- [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020) uses CITL to learn a aberration approximator that models the residual between holograms generated from ideal wave propagation (i.e. ASM) and real-world wave propagation models. An adversarial loss is used in addition to reconstruction loss to optimize the synthesized holograms.
 
 Previous works assume a naive wave propagation model (i.e. the angular spectrum method), and directly regresses complex holograms using different CNN architectures:
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (Shi et al. 2021)
