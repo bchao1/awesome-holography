@@ -3,13 +3,14 @@
 A curated list of resources on holographic displays, inspired by [awesome-computer-vision](https://github.com/jbhuang0604/awesome-computer-vision).
 
 ## Table of Contents
-- Background, Theory, and Survey Papers
-- Computer Generated Holography (CGH)
-    - Traditional Heuristic Methods
-    - Iterative Methods
-    - Data-driven (Learning-based) Methods
-- Holographic Display Architectures and Optics
-- Etendue / Eyebox Expansion
+- [Background, Theory, and Survey Papers](#background-theory-and-survey)
+- [Computer Generated Holography (CGH)](#computer-generated-holography-cgh)
+    - [Traditional Heuristic Methods](#traditional-heuristic-methods)
+    - [Iterative Methods](#iterative-methods)
+    - [Data-driven (Learning-based) Methods](#data-driven-learning-based-methods)
+- [Holographic Display Architectures and Optics](#holographic-display-architectures-and-optics)
+- [Etendue / Eyebox Expansion](#etendue--eyebox-expansion)
+
 
 ## Background, Theory, and Survey
 ### Background and Theory
@@ -73,6 +74,7 @@ Previous works assume a naive wave propagation model (i.e. the angular spectrum 
 - [Deep-learning-generated holography](https://opg.optica.org/ao/abstract.cfm?uri=ao-57-14-3859) (Horisaki et al. 2018)
 - [Phase recovery and holographic image reconstruction using deep learning in neural networks](https://www.nature.com/articles/lsa2017141) (Rivenson et al. 2018)
 
+
 ## Holographic Display Architectures and Optics
 
 Most CGH display frameworks use coherent light source (laser) and a single phase-only SLM. The following works explore alternatives to the current paradigm, such as using partially-coherent light sources, amplitude SLMs, and adding additional optical elements.
@@ -89,6 +91,7 @@ Special optical elements are used to improve the holographic display quality:
 - [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (Jang et al. 2017)
 - [Holographic display for see-through augmented reality using mirror-lens holographic optical element](https://opg.optica.org/ol/abstract.cfm?uri=ol-41-11-2486) (Li et al. 2016)
 - [3D holographic head mounted display using holographic optical elements with astigmatism aberration compensation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-25-32025&id=333174) (Yeom et al. 2015)
+
 
 ## Etendue / Eyebox Expansion
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (Kuo et al. 2020)
