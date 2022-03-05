@@ -48,7 +48,7 @@ Others:
 A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm** where the phase and amplitute patterns at two planes are updated iteratively as the wave is propagated back and forth:
 
 - [A practical algorithm for the determination of phase from image and diffraction plane pictures](http://www.u.arizona.edu/~ppoon/GerchbergandSaxton1972.pdf) (Gerchberg et al. 1972) proposed the **Gerchberg-Saxton (GS) Algorithm**
-- [Mix-and-Match Holography](http://www.cs.ubc.ca/labs/imager/tr/2017/MixMatchHolography/MixMatchHolography_YPeng_SA17_LowRes.pdf) (Peng et al. 2017) proposed a IPR method built upon GS
+- [Mix-and-Match Holography](http://www.cs.ubc.ca/labs/imager/tr/2017/MixMatchHolography/MixMatchHolography_YPeng_SA17_LowRes.pdf) (Peng et al. 2017) proposed an interative phase-retrieval method built upon GS
 - [Fresnel ping-pong algorithm for two-plane computer-generated hologram display](https://opg.optica.org/ao/ViewMedia.cfm?uri=ao-33-5-869&seq=0&guid=cd9375f1-824e-4719-a271-624d5c09ccca&html=true) (Dorsch et al. 1994) 
 
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
@@ -60,22 +60,28 @@ Other optimization based methods leverage gradient descent or non-convex optimiz
 
 ### Data-driven (Learning-based) Methods
 
-Recent advances in ML for CGH is focused on learning an accurate wave propagation model for holographic displays:
+Recent advances in deep learning for CGH is focused on learning an accurate free space wave propagation and optical hardware model for holographic displays:
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021)
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
 
+Previous works assume a naive wave propagation model (i.e. the angular spectrum method), and directly regresses complex holograms using different CNN architectures:
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (Shi et al. 2021)
-
-
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (Eybposh et al. 2020)
 - [Deep neural network for multi-depth hologram generation and its training strategy](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-27137&id=437709) (Lee et al. 2020)
 - [Deep-learning-generated holography](https://opg.optica.org/ao/abstract.cfm?uri=ao-57-14-3859) (Horisaki et al. 2018)
 - [Phase recovery and holographic image reconstruction using deep learning in neural networks](https://www.nature.com/articles/lsa2017141) (Rivenson et al. 2018)
 
 ## Holographic Display Architectures and Optics
-- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (Peng et al. 2021)
+
+Most CGH display frameworks use coherent light source (laser) and a single phase-only SLM. The following works explore alternatives to the current paradigm, such as using partially-coherent light sources, amplitude SLMs, and adding additional optical elements.
+   
+Partially-coherent light sources are used to reduce speckle artifacts:
+- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (Peng et al. 2021) uses partially coherent light sources and camera-in-the-loop optimization to reduce speckle artifacts.
+- [Light source optimization for partially coherent holographic displays with consideration of speckle contrast, resolution, and depth of field](https://www.nature.com/articles/s41598-020-75947-0)
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (Moon et al. 2014)
+
+Special optical elements are used to improve the holographic display quality:
 - [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (Gao et al. 2016)
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (Choi et al. 2021)
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://dl.acm.org/doi/abs/10.1145/3386569.3392416) (Maimone et al. 2020)
