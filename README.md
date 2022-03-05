@@ -4,10 +4,9 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 
 ## Table of Contents
 - Background, Theory, and Survey Papers
-- Computer Generated Holography (CGH) for Coherent Light
-    - Heuristic-based Methods
-    - Iterative Phase Retrieval-based Methods
-    - Optimization-based Methods
+- Computer Generated Holography (CGH)
+    - Traditional Heuristic Methods
+    - Iterative Methods
     - Data-driven (Learning-based) Methods
 - Holographic Display Architectures and Optics
 - Etendue / Eyebox Expansion
@@ -20,12 +19,14 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 - [Toward the next-generation VR/AR optics: a review of holographic near-eye displays from a human-centric perspective](https://opg.optica.org/optica/fulltext.cfm?uri=optica-7-11-1563&id=442336) (Chang et al. 2020)
 - [Deep learning in holography and coherent imaging](https://www.nature.com/articles/s41377-019-0196-0) (Rivenson et al. 2019)
 
-## Computer Generated Holography (CGH) for Coherent Light and 
+## Computer Generated Holography (CGH)
 
-### Heuristic-based Methods
+### Traditional Heuristic Methods
 #### Double Phase Encoding
 - [Computer-generated double-phase holograms](https://opg.optica.org/ao/abstract.cfm?uri=ao-17-24-3874) (Hsueh et al. 1978) proposed to decompose a complex field into two phase-only components to generate holograms using phase-only SLMs.
 - [Holographic Near-Eye Displays for Virtual and Augmented Reality](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/holo_author.pdf) (Maimone et al. 2017) proposed a holographic near-eye display system based on the double phase encoding scheme.
+
+#### Point-based Methods
 
 #### Polygon/Mesh-based Methods
 - [Computer-generated holograms of 3-D objects composed of tilted planar segments](https://opg.optica.org/ao/abstract.cfm?uri=ao-27-14-3020) (Leseberg et al. 1988)
@@ -36,12 +37,17 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 - [Computer generated holograms from three dimensional meshes using an analytic light transport model](https://opg.optica.org/ao/abstract.cfm?uri=ao-47-10-1567) (Ahrenberg et al. 2008)
 - [Fast and effective occlusion culling for 3D holographic displays by inverse orthographic projection with low angular sampling](https://opg.optica.org/ao/abstract.cfm?uri=ao-53-27-6287) (Jia et al. 2014)
 
-### Iterative Phase Retrieval-based Methods
+#### Layer-based Methods
+
+### Iterative Methods
+A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm** where the phase and amplitute patterns at two planes are updated iteratively as the wave is propagated back and forth:
+
 - [A practical algorithm for the determination of phase from image and diffraction plane pictures](http://www.u.arizona.edu/~ppoon/GerchbergandSaxton1972.pdf) (Gerchberg et al. 1972) proposed the **Gerchberg-Saxton (GS) Algorithm**
 - [Mix-and-Match Holography](http://www.cs.ubc.ca/labs/imager/tr/2017/MixMatchHolography/MixMatchHolography_YPeng_SA17_LowRes.pdf) (Peng et al. 2017) proposed a IPR method built upon GS
 - [Fresnel ping-pong algorithm for two-plane computer-generated hologram display](https://opg.optica.org/ao/ViewMedia.cfm?uri=ao-33-5-869&seq=0&guid=cd9375f1-824e-4719-a271-624d5c09ccca&html=true) (Dorsch et al. 1994) 
 
-### Optimization-based Methods
+Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
+
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (Chen et al. 2021)
 - [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimized the phase-only hologram using closed-form Wirtinger complex derivatives.
 - [3D computer-generated holography by non-convex optimization](https://opg.optica.org/optica/fulltext.cfm?uri=optica-4-10-1306&id=375391) (Zhang et al. 2017)
@@ -59,8 +65,11 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 
 ## Holographic Display Architectures and Optics
 - [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (Peng et al. 2021)
+- [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (Moon et al. 2014)
+- [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (Gao et al. 2016)
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (Choi et al. 2021)
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://dl.acm.org/doi/abs/10.1145/3386569.3392416) (Maimone et al. 2020)
+- [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (Jang et al. 2017)
 - [Holographic display for see-through augmented reality using mirror-lens holographic optical element](https://opg.optica.org/ol/abstract.cfm?uri=ol-41-11-2486) (Li et al. 2016)
 - [3D holographic head mounted display using holographic optical elements with astigmatism aberration compensation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-25-32025&id=333174) (Yeom et al. 2015)
 
