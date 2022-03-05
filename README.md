@@ -30,7 +30,7 @@ Some methods are based on the double phase encoding scheme, where two phase-only
 - [Computer-generated double-phase holograms](https://opg.optica.org/ao/abstract.cfm?uri=ao-17-24-3874) (Hsueh et al. 1978) proposed to decompose a complex field into two phase-only components to generate holograms using a single phase-only SLM.
 - [Holographic Near-Eye Displays for Virtual and Augmented Reality](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/holo_author.pdf) (Maimone et al. 2017) proposed a holographic near-eye display system based on the double phase encoding scheme.
 
-Others:
+Others methods include:
 - [Near-eye Light Field Holographic Rendering with Spherical Waves for Wide Field of View Interactive 3D Computer Graphics](https://people.csail.mit.edu/liangs/papers/ToG17.pdf) (Shi et al. 2017)
 
 #### Polygon/Mesh-based Methods
@@ -60,7 +60,7 @@ Other optimization based methods leverage gradient descent or non-convex optimiz
 
 ### Data-driven (Learning-based) Methods
 
-Recent advances in deep learning for CGH is focused on learning an accurate free space wave propagation and optical hardware model for holographic displays:
+Recent advances in deep learning for CGH leverages camera-in-the-loop (CITL) training to learn an accurate free space wave propagation and optical hardware model for holographic displays:
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021)
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
