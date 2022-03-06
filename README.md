@@ -2,6 +2,13 @@
 
 A curated list of resources on holographic displays, inspired by [awesome-computer-vision](https://github.com/jbhuang0604/awesome-computer-vision).
 
+## Disclaimer
+
+This list is compiled during my paper survey about holographic displays, and is not meant to be exhuastive. The list is organized for me to easily navigate different topics in holography. I would like to thank the authors of the following papers for providing great references:
+
+- [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
+- [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
+
 ## Table of Contents
 - [Background, Theory, and Survey Papers](#background-theory-and-survey)
 - [Computer Generated Holography (CGH)](#computer-generated-holography-cgh)
