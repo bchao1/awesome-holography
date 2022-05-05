@@ -61,6 +61,7 @@ A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm*
 
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
 
+- [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428)(Chakravarthula et al. 2022)
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (Chen et al. 2021)
 - [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimizes the phase-only SLM pattern using closed-form Wirtinger complex derivatives in gradient descent.
 - [3D computer-generated holography by non-convex optimization](https://opg.optica.org/optica/fulltext.cfm?uri=optica-4-10-1306&id=375391) (Zhang et al. 2017)
@@ -72,8 +73,10 @@ Unfortunately, iterative methods are inherently slow and thus not suitble for re
 A major focus in deep learning for CGH is using camera-in-the-loop (CITL) training to learn an accurate free space wave propagation and optical hardware model for holographic displays:
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020) is the first to use **camera-in-the-loop training (CITL)** to optimize a parameterized wave propagation model, where optical aberrations, SLM non-linearities, and etc are learned from data. A CNN is also proposed to synthesize 2D and 3D holograms in real-time. 
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (Choi et al. 2021) uses two CNNs to directly model optical aberrations, SLM non-linearities, and etc, at the input plane and **multiple** target planes. The usage of two CNNs introduces more degrees of freedom than that of the parameterized propagation model proposed in Peng et al. 2020, such that higher quality 3D holograms can be achieved.
+- [Time-multiplexed Neural Holography: A Flexible Framework for Holographic Near-eye Displays with Fast Heavily-quantized Spatial Light Modulators](https://www.computationalimaging.org/publications/time-multiplexed-neural-holography/) (Choi et al. 2022)
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020) uses CITL to learn an aberration approximator that models the residual between holograms generated from ideal wave propagation (i.e. ASM) and real-world wave propagation models. An adversarial loss is used in addition to reconstruction loss to optimize the synthesized holograms.
 
+   
 Previous works assume a naive wave propagation model (i.e. the angular spectrum method), and directly regresses complex holograms using different CNN architectures:
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (Shi et al. 2021) 
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (Eybposh et al. 2020) uses a CNN to estimate a complex field at a fixed plane from a set of 3D target multiplane inputs; the complex field is then reverse propagated to the SLM plane to generate a phase pattern.
@@ -98,8 +101,13 @@ Special optical elements are used to improve the holographic display quality:
 - [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (Jang et al. 2017)
 - [Holographic display for see-through augmented reality using mirror-lens holographic optical element](https://opg.optica.org/ol/abstract.cfm?uri=ol-41-11-2486) (Li et al. 2016)
 - [3D holographic head mounted display using holographic optical elements with astigmatism aberration compensation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-25-32025&id=333174) (Yeom et al. 2015)
+   
+Bulky headsets hamper the development of AR/VR. Reducing the size of holographic displays are important:
+- [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (Kim et al. 2022) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
 
 
-## Etendue / Eyebox Expansion
+## Etendue expansion, Eyebox / Pupil-related
+- [Pupil-aware Holography](https://arxiv.org/pdf/2203.14939.pdf)(Chakravarthula et al. 2022)(https://arxiv.org/pdf/2203.14939.pdf)
+- [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123)(Baek et al. 2022)
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (Kuo et al. 2020)
 - [Holographic Near-eye Display with Expanded Eye-box](https://dl.acm.org/doi/10.1145/3272127.3275069) (Jang et al. 2018)
