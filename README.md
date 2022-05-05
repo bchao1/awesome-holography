@@ -108,8 +108,8 @@ Bulky headsets hamper the development of AR/VR. Reducing the size of holographic
 
 
 ## Etendue expansion, Eyebox / Pupil-related
-- [Pupil-aware Holography](https://arxiv.org/pdf/2203.14939.pdf)(Chakravarthula et al. 2022)(https://arxiv.org/pdf/2203.14939.pdf)
-- [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123)(Baek et al. 2022)
+- [Pupil-aware Holography](https://arxiv.org/pdf/2203.14939.pdf) (Chakravarthula et al. 2022)
+- [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123) (Baek et al. 2022)
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (Kuo et al. 2020)
 - [Holographic Near-eye Display with Expanded Eye-box](https://dl.acm.org/doi/10.1145/3272127.3275069) (Jang et al. 2018)
 
