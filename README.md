@@ -17,6 +17,7 @@ This list is compiled during my paper survey about holographic displays, and is 
     - [Data-driven (Learning-based) Methods](#data-driven-learning-based-methods)
 - [Holographic Display Architectures and Optics](#holographic-display-architectures-and-optics)
 - [Etendue / Eyebox Expansion](#etendue--eyebox-expansion)
+- [Labs and Researchers](#labs-and-researchers)
 
 
 ## Background, Theory, and Survey
@@ -111,3 +112,10 @@ Bulky headsets hamper the development of AR/VR. Reducing the size of holographic
 - [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123)(Baek et al. 2022)
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (Kuo et al. 2020)
 - [Holographic Near-eye Display with Expanded Eye-box](https://dl.acm.org/doi/10.1145/3272127.3275069) (Jang et al. 2018)
+
+## Labs and Researchers
+- [Computational Imaging Lab, Stanford University](https://www.computationalimaging.org)
+- [Computational Imaging Lab, Princeton University](https://light.princeton.edu)
+- [Computational Biophotonics Laboratory, UNC Chapel Hill](http://www.nicolaspegard.com/index.php)
+- [Computational Imaging Group, KAUST](https://vccimaging.org/publications.html)
+- [NVIDIA Research](https://www.nvidia.com/en-us/research/)
