@@ -10,13 +10,13 @@ This list is compiled during my paper survey about holographic displays, and is 
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
 
 ## Table of Contents
-- [Background, Theory, and Survey Papers](#background-theory-and-survey)
+- [Background, Theory, and Survey](#background-theory-and-survey)
 - [Computer Generated Holography (CGH)](#computer-generated-holography-cgh)
     - [Traditional Heuristic Methods](#traditional-heuristic-methods)
     - [Iterative Methods](#iterative-methods)
     - [Data-driven (Learning-based) Methods](#data-driven-learning-based-methods)
 - [Holographic Display Architectures and Optics](#holographic-display-architectures-and-optics)
-- [Etendue / Eyebox Expansion](#etendue--eyebox-expansion)
+- [Etendue, Eyebox, Pupil Related](#etendue-eyebox-pupil-related)
 - [Labs and Researchers](#labs-and-researchers)
 
 
@@ -107,7 +107,7 @@ Bulky headsets hamper the development of AR/VR. Reducing the size of holographic
 - [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (Kim et al. 2022) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
 
 
-## Etendue expansion, Eyebox / Pupil-related
+## Etendue, Eyebox, Pupil Related
 - [Pupil-aware Holography](https://arxiv.org/pdf/2203.14939.pdf) (Chakravarthula et al. 2022)
 - [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123) (Baek et al. 2022)
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (Kuo et al. 2020)
@@ -118,4 +118,5 @@ Bulky headsets hamper the development of AR/VR. Reducing the size of holographic
 - [Computational Imaging Lab, Princeton University](https://light.princeton.edu)
 - [Computational Biophotonics Laboratory, UNC Chapel Hill](http://www.nicolaspegard.com/index.php)
 - [Computational Imaging Group, KAUST](https://vccimaging.org/publications.html)
+- [Optical Engineering and Quantum Electronics Lab, Seoul National University](http://oeqelab.snu.ac.kr)
 - [NVIDIA Research](https://www.nvidia.com/en-us/research/)
