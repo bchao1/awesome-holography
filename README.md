@@ -119,6 +119,7 @@ Bulky headsets hamper the development of AR/VR. Reducing the size of holographic
 - [Computational Imaging Lab, Stanford University](https://www.computationalimaging.org)
 - [Computational Imaging Lab, Princeton University](https://light.princeton.edu)
 - [Computational Biophotonics Laboratory, UNC Chapel Hill](http://www.nicolaspegard.com/index.php)
+- [Graphics and Virtual Reality Group, UNC Chapel Hill](https://telepresence.web.unc.edu)
 - [Computational Light Laboratory, University College London](https://complightlab.com)
 - [Computational Imaging Group, KAUST](https://vccimaging.org/publications.html)
 - [Optical Engineering and Quantum Electronics Lab, Seoul National University](http://oeqelab.snu.ac.kr)
