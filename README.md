@@ -19,7 +19,6 @@ This list is compiled during my paper survey about holographic displays, and is 
 - [Etendue, Eyebox, Pupil Related](#etendue-eyebox-pupil-related)
 - [Labs and Researchers](#labs-and-researchers)
 
-
 ## Background, Theory, and Survey
 ### Background and Theory
 - [Introduction to Fourier Optics](https://books.google.com.tw/books/about/Introduction_to_Fourier_Optics.html?id=QllRAAAAMAAJ&redir_esc=y) by Joseph W. Goodman is a great book to learn the basics of wave propagation and holography.
@@ -124,3 +123,10 @@ Bulky headsets hamper the development of AR/VR. Reducing the size of holographic
 - [Computational Imaging Group, KAUST](https://vccimaging.org/publications.html)
 - [Optical Engineering and Quantum Electronics Lab, Seoul National University](http://oeqelab.snu.ac.kr)
 - [NVIDIA Research](https://www.nvidia.com/en-us/research/)
+
+## Contributing
+If you want to contribute to this list, please 
+1. [Created a new issue](https://github.com/bchao1/awesome-holography/issues)
+2. Explain in the issue why the paper / book / talk is relevant, and under which category should the resource be placed.
+   
+Thank you!
