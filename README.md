@@ -51,6 +51,15 @@ Others methods include:
 - [Fast and effective occlusion culling for 3D holographic displays by inverse orthographic projection with low angular sampling](https://opg.optica.org/ao/abstract.cfm?uri=ao-53-27-6287) (Jia et al. 2014)
 
 #### Layer-based Methods
+- [Computer-generated hologram with occlusion effect using layer-based processing](https://opg.optica.org/ao/abstract.cfm?uri=ao-56-13-F138) (Zhang et al. 2017)
+- [Accurate calculation of computer-generated holograms using angular-spectrum layer-oriented method](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-20-25440&id=326909) (Zhao et al. 2015)
+- [Improved layer-based method for rapid hologram generation and real-time interactive holographic display applications](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-14-18143&id=321638) (Chen et al. 2015)
+- [Computer generated hologram with geometric occlusion using GPU-accelerated depth buffer rasterization for three-dimensional display](https://opg.optica.org/ao/abstract.cfm?uri=ao-48-21-4246) (Chen et al. 2009)
+
+#### Holographic Stereograms
+- [Holographic near-eye displays based on overlap-add stereograms](http://www.computationalimaging.org/publications/holographic-near-eye-displays-based-on-overlap-add-stereograms-siggraph-asia-2019/) (Padmanaban et al. 2019)
+- [Layered holographic stereogram based on inverse Fresnel diffraction](https://opg.optica.org/ao/abstract.cfm?uri=ao-55-3-A154) (Zhang et al. 2016)
+- [Fully computed holographic stereogram based algorithm for computer-generated holograms with accurate depth cues](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-4-3901&id=311865) (Zhang et al. 2015)
 
 ### Iterative Methods
 A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm** where the phase and amplitute patterns at two planes are updated iteratively as the wave propagates back and forth between the two planes:
