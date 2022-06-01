@@ -22,6 +22,7 @@ This list is compiled during my paper survey about holographic displays, and is 
 ## Background, Theory, and Survey
 ### Background and Theory
 - [Introduction to Fourier Optics](https://books.google.com.tw/books/about/Introduction_to_Fourier_Optics.html?id=QllRAAAAMAAJ&redir_esc=y) by Joseph W. Goodman is a great book to learn the basics of wave propagation and holography.
+- [Numerical simulation of optical wave propagation: With examples in MATLAB](https://www.spiedigitallibrary.org/ebooks/PM/Numerical-Simulation-of-Optical-Wave-Propagation-with-Examples-in-MATLAB/eISBN-9780819483270/10.1117/3.866274?SSO=1) by Jason D. Schmidt walks you through the nitty-gritty details of implementing optial wave propagation.
 
 ### Survey Papers
 - [Toward the next-generation VR/AR optics: a review of holographic near-eye displays from a human-centric perspective](https://opg.optica.org/optica/fulltext.cfm?uri=optica-7-11-1563&id=442336) (Chang et al. 2020)
@@ -106,6 +107,7 @@ Partially-coherent light sources are used to reduce speckle artifacts:
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (Moon et al. 2014)
 
 Special optical elements are used to improve the holographic display quality:
+- [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (Cakmakci et al. 2021)
 - [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (Gao et al. 2016)
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (Choi et al. 2021)
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://dl.acm.org/doi/abs/10.1145/3386569.3392416) (Maimone et al. 2020)
