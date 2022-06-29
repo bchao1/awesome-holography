@@ -140,6 +140,7 @@ Bulky headsets hamper the development of AR/VR. **Reducing the size** of hologra
 - [Computational Imaging Group, KAUST](https://vccimaging.org/publications.html)
 - [Optical Engineering and Quantum Electronics Lab, Seoul National University](http://oeqelab.snu.ac.kr)
 - [NVIDIA Research](https://www.nvidia.com/en-us/research/)
+- [Meta Research](https://research.facebook.com)
 
 ## Contributing
 If you want to contribute to this list, please 
