@@ -71,9 +71,9 @@ A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm*
 
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
 
-- [Accommodative Holography: Improving Accommodation Response for Perceptually Realistic Holographic Displays](https://drive.google.com/drive/folders/1K0DfdG75kcz_xU6BF9PDwzevhp1t_UmO)(Kim et al. 2022) analyzed the user accomodation performance when using different CGH methods and proposed a novel constrast ratio-based regularization loss that promotes better accomodation cues.
-- [Metameric Varifocal Holograms](https://github.com/complight/metameric_holography)(Walton et al. 2022) proposed a foveated graphics-inspired, gaze-contingent loss function that can be easily integrated into CGH optimization loops.
-- [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428)(Chakravarthula et al. 2022)
+- [Accommodative Holography: Improving Accommodation Response for Perceptually Realistic Holographic Displays](https://drive.google.com/drive/folders/1K0DfdG75kcz_xU6BF9PDwzevhp1t_UmO) (Kim et al. 2022) analyzed the user accomodation performance when using different CGH methods and proposed a novel constrast ratio-based regularization loss that promotes better accomodation cues.
+- [Metameric Varifocal Holograms](https://github.com/complight/metameric_holography) (Walton et al. 2022) proposed a foveated graphics-inspired, gaze-contingent loss function that can be easily integrated into CGH optimization loops.
+- [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428) (Chakravarthula et al. 2022)
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (Chen et al. 2021)
 - [Realistic Defocus Blur for Multiplane Computer-Generated Holography](https://arxiv.org/abs/2205.07030) (Kavaklı et al. 2021) proposed a novel loss function aimed to synthesize high quality defocus blur, and can be intergated in various iterative (GS, gradient-descent) and non-iterative (double phase encoding) methods. 
 - [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (Chakravarthula et al. 2019) optimizes the phase-only SLM pattern using closed-form Wirtinger complex derivatives in gradient descent.
@@ -109,8 +109,8 @@ Partially-coherent light sources are used to reduce speckle artifacts:
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (Moon et al. 2014)
 
 Special optical elements are used to improve the holographic display quality:
-- [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/)(Maimone et al. 2021)
-- [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/)(Jang et al.)
+- [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (Maimone et al. 2021)
+- [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/) (Jang et al.)
 - [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (Cakmakci et al. 2021)
 - [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (Gao et al. 2016)
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (Choi et al. 2021)
