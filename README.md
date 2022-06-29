@@ -72,6 +72,7 @@ A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm*
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
 
 - [Accommodative Holography: Improving Accommodation Response for Perceptually Realistic Holographic Displays](https://drive.google.com/drive/folders/1K0DfdG75kcz_xU6BF9PDwzevhp1t_UmO)(Kim et al. 2022) analyzed the user accomodation performance when using different CGH methods and proposed a novel constrast ratio-based regularization loss that promotes better accomodation cues.
+- [Metameric Varifocal Holograms](https://github.com/complight/metameric_holography)(Walton et al. 2022) proposed a foveated graphics-inspired, gaze-contingent loss function that can be easily integrated into CGH optimization loops.
 - [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428)(Chakravarthula et al. 2022)
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (Chen et al. 2021)
 - [Realistic Defocus Blur for Multiplane Computer-Generated Holography](https://arxiv.org/abs/2205.07030) (Kavaklı et al. 2021) proposed a novel loss function aimed to synthesize high quality defocus blur, and can be intergated in various iterative (GS, gradient-descent) and non-iterative (double phase encoding) methods. 
