@@ -122,7 +122,7 @@ Bulky headsets hamper the development of AR/VR. **Reducing the size** of hologra
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (*Maimone et al. 2021 | SIGGRAPH, ACM*)
    
 **CGH compression** is also important for deploying holography technology on edge devices:
-- [Joint Neural Phase Retrieval and Compression for Energy- and Computation-efficient Holography on the Edge](https://www.immersivecomputinglab.org/publication/joint-neural-phase-retrieval-and-compression-for-energy-and-computation-efficient-holography-on-the-edge/)(*Wang et al. 2022 | SIGGRAPH, ACM*)
+- [Joint Neural Phase Retrieval and Compression for Energy- and Computation-efficient Holography on the Edge](https://www.immersivecomputinglab.org/publication/joint-neural-phase-retrieval-and-compression-for-energy-and-computation-efficient-holography-on-the-edge/) (*Wang et al. 2022 | SIGGRAPH, ACM*)
 
 
 ## Etendue, Eyebox, Pupil Related
