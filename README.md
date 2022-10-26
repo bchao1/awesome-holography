@@ -4,7 +4,7 @@ A curated list of resources on holographic displays, inspired by [awesome-comput
 
 ## Disclaimer
 
-This list is compiled during my paper survey about holographic displays, and is not meant to be exhuastive. The list is organized for me to easily navigate different topics in holography. I would like to thank the authors of the following papers for providing great references:
+This list is compiled during my paper survey about holographic displays, and is not meant to be exhuastive. The list is organized for me to easily navigate different topics in holography. I would like to thank the authors of the following papers for providing great initial references:
 
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (Peng et al. 2020)
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (Chakravarthula et al. 2020)
@@ -18,6 +18,7 @@ This list is compiled during my paper survey about holographic displays, and is 
 - [Holographic Display Architectures, Optics, and Systems](#holographic-display-architectures-optics-and-systems)
 - [Etendue, Eyebox, Pupil Related](#etendue-eyebox-pupil-related)
 - [Labs and Researchers](#labs-and-researchers)
+- [Talks, Lectures, and Tutorials](#talks-lectures-and-tutorials)
 
 ## Background, Theory, and Survey
 ### Background and Theory
@@ -91,7 +92,8 @@ A major focus in deep learning for CGH is using camera-in-the-loop (CITL) traini
    
 Instead of using a predetermined convolution kernel to compute wave propagation (i.e. the angular spectrum method), [Learned holographic light transport](https://arxiv.org/pdf/2108.08253.pdf) (*Kavaklı et al. 2021 | Applied Optics, Optica*) learns the wave propagation convolution kernel directly from images captured by a physical holographic display.
 
-Previous works assume a naive wave propagation model (i.e. the angular spectrum method), and directly regresses complex holograms using different CNN architectures:
+Previous works assume a naive wave propagation model (i.e. the angular spectrum method), and directly regresses complex holograms using novel CNN architectures:
+- [End-to-end Learning of 3D Phase-only Holograms for Holographic Display](http://cgh-v2.csail.mit.edu) (*Shi et al. 2022 | Light: Science and Applications, Nature*) 
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (*Shi et al. 2021 | Nature, Nature*) 
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (*Eybposh et al. 2020 | Optics Express, Optica*) uses a CNN to estimate a complex field at a fixed plane from a set of 3D target multiplane inputs; the complex field is then reverse propagated to the SLM plane to generate a phase pattern.
 - [Deep neural network for multi-depth hologram generation and its training strategy](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-27137&id=437709) (*Lee et al. 2020 | Optics Express, Optica*) directly estimates the SLM phase pattern from 3D target multiplane inputs using a CNN.
@@ -109,8 +111,9 @@ Partially-coherent light sources are used to reduce speckle artifacts:
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (*Moon et al. 2014 | Optics Express, Optica*)
 
 Special optical elements are used to improve the holographic display quality:
-- [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/) (*Jang et al. 2020 | SIGGRAPH Asia, ACM*)
+- [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (*Choi et al. 2021 | Optica, Optica*) uses 2 SLMs to correct for the unwanted interference caused by undiffracted light in single-SLM settings. A CITL procedure is also deployed to simultaneously optimize 2 SLM patterns.
 - [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (*Cakmakci et al. 2021 | Optics Express, Optica*)
+- [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/) (*Jang et al. 2020 | SIGGRAPH Asia, ACM*)
 - [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (*Gao et al. 2016 | Optics Express, Optica*)
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (*Choi et al. 2021 | Optica, Optica*)
 - [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (*Jang et al. 2017 | SIGGRAPH Asia, ACM*)
@@ -141,6 +144,9 @@ Bulky headsets hamper the development of AR/VR. **Reducing the size** of hologra
 - [Optical Engineering and Quantum Electronics Lab, Seoul National University](http://oeqelab.snu.ac.kr)
 - [NVIDIA Research](https://www.nvidia.com/en-us/research/)
 - [Meta Research](https://research.facebook.com)
+
+## Talks, Lectures, and Tutorials
+- [Could Deep Learning Improve Visual Quality in Holographic Displays?](https://www.youtube.com/watch?v=lbgRke4H_HA)(Optica, 2022)
 
 ## Contributing
 If you want to contribute to this list, please 
