@@ -14,7 +14,8 @@ This list is compiled during my paper survey about holographic displays, and is 
 - [Computer Generated Holography (CGH)](#computer-generated-holography-cgh)
     - [Traditional Heuristic Methods](#traditional-heuristic-methods)
     - [Iterative Methods](#iterative-methods)
-    - [Data-driven (Learning-based) Methods](#data-driven-learning-based-methods)
+    - [Learned Propagation Model Methods](#learned-propagation-model-methods)
+    - [Learned Hologram Synthesis Methods](#learned-hologram-synthesis-methods)
 - [Holographic Display Architectures, Optics, and Systems](#holographic-display-architectures-optics-and-systems)
 - [Etendue, Eyebox, Pupil Related](#etendue-eyebox-pupil-related)
 - [Labs and Researchers](#labs-and-researchers)
@@ -82,9 +83,9 @@ Other optimization based methods leverage gradient descent or non-convex optimiz
    
 Unfortunately, iterative methods are inherently slow and thus not suitble for real-time CGH.
 
-### Data-driven (Learning-based) Methods
+### Learned Propagation Model Methods
+There are often mismatches between a ideal wave propagation model (e.g. ASM) with the actual physical display setup. A major focus in deep learning for CGH is using camera-in-the-loop (CITL) training to learn an accurate free space wave propagation and optical hardware model for holographic displays:
 
-A major focus in deep learning for CGH is using camera-in-the-loop (CITL) training to learn an accurate free space wave propagation and optical hardware model for holographic displays:
 - [Neural Holography with Camera-in-the-loop Training](https://www.computationalimaging.org/publications/neuralholography/) (*Peng et al. 2020 | SIGGRAPH, ACM*) is the first to use **camera-in-the-loop training (CITL)** to optimize a parameterized wave propagation model, where optical aberrations, SLM non-linearities, and etc are learned from data. A CNN is also proposed to synthesize 2D and 3D holograms in real-time. 
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (*Choi et al. 2021 | SIGGRAPH Asia, ACM*) uses two CNNs to directly model optical aberrations, SLM non-linearities, and etc, at the input plane and **multiple** target planes. The usage of two CNNs introduces more degrees of freedom than that of the parameterized propagation model proposed in Peng et al. 2020, such that higher quality 3D holograms can be achieved.
 - [Time-multiplexed Neural Holography: A Flexible Framework for Holographic Near-eye Displays with Fast Heavily-quantized Spatial Light Modulators](https://www.computationalimaging.org/publications/time-multiplexed-neural-holography/) (*Choi et al. 2022 | SIGGRAPH, ACM*) leveraged time-multiplexed quantized SLM patterns to synthesize high quality defocus blur. 
@@ -92,14 +93,14 @@ A major focus in deep learning for CGH is using camera-in-the-loop (CITL) traini
    
 Instead of using a predetermined convolution kernel to compute wave propagation (i.e. the angular spectrum method), [Learned holographic light transport](https://arxiv.org/pdf/2108.08253.pdf) (*Kavaklı et al. 2021 | Applied Optics, Optica*) learns the wave propagation convolution kernel directly from images captured by a physical holographic display.
 
-Previous works assume a naive wave propagation model (i.e. the angular spectrum method), and directly regresses complex holograms using novel CNN architectures:
+### Learned Hologram Synthesis Methods
+These works often assume a naive wave propagation model (i.e. the angular spectrum method (ASM)), and directly regresses complex holograms using novel CNN architectures:
 - [End-to-end Learning of 3D Phase-only Holograms for Holographic Display](http://cgh-v2.csail.mit.edu) (*Shi et al. 2022 | Light: Science and Applications, Nature*) 
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (*Shi et al. 2021 | Nature, Nature*) 
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (*Eybposh et al. 2020 | Optics Express, Optica*) uses a CNN to estimate a complex field at a fixed plane from a set of 3D target multiplane inputs; the complex field is then reverse propagated to the SLM plane to generate a phase pattern.
 - [Deep neural network for multi-depth hologram generation and its training strategy](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-27137&id=437709) (*Lee et al. 2020 | Optics Express, Optica*) directly estimates the SLM phase pattern from 3D target multiplane inputs using a CNN.
 - [Deep-learning-generated holography](https://opg.optica.org/ao/abstract.cfm?uri=ao-57-14-3859) (*Horisaki et al. 2018 | Applied Optics, Optica*)
 - [Phase recovery and holographic image reconstruction using deep learning in neural networks](https://www.nature.com/articles/lsa2017141) (*Rivenson et al. 2018 | Light: Science and Applications, Nature*)
-
 
 ## Holographic Display Architectures, Optics, and Systems
 
@@ -123,6 +124,7 @@ Special optical elements are used to improve the holographic display quality:
 Bulky headsets hamper the development of AR/VR. **Reducing the size** of holographic displays are important:
 - [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (*Kim et al. 2022 | SIGGRAPH, ACM*) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (*Maimone et al. 2021 | SIGGRAPH, ACM*)
+- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968)(*Gopakumar et al. 2021 | Optics Letters, Optica*)
    
 **CGH compression** is also important for deploying holography technology on edge devices:
 - [Joint Neural Phase Retrieval and Compression for Energy- and Computation-efficient Holography on the Edge](https://www.immersivecomputinglab.org/publication/joint-neural-phase-retrieval-and-compression-for-energy-and-computation-efficient-holography-on-the-edge/) (*Wang et al. 2022 | SIGGRAPH, ACM*)
