@@ -106,8 +106,9 @@ These works often assume a naive wave propagation model (i.e. the angular spectr
 
 Most CGH display frameworks use coherent light source (laser) and a single phase-only SLM. The following works explore alternatives to the current paradigm, such as using partially-coherent light sources, amplitude SLMs, and adding additional optical elements.
    
-Partially-coherent light sources are used to reduce speckle artifacts:
-- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (*Peng et al. 2021 | Science Advaces, Science*) uses partially coherent light sources and camera-in-the-loop optimization to reduce speckle artifacts.
+Partial coherence (in a general sense) are often deployed to reduce speckle artifacts:
+- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (*Peng et al. 2021 | Science Advaces, Science*) uses partially coherent light sources (i.e. LED) and camera-in-the-loop optimization to reduce speckle artifacts.
+- [High‐contrast, speckle‐free, true 3D holography via binary CGH optimization](https://www.nature.com/articles/s41598-022-06405-2#Sec15)(*Lee et al. 2022 | Scientific Reports, Nature*) leveraged time-multiplexing of random phase, amplitude only SLMs to reduce speckle noise.
 - [Light source optimization for partially coherent holographic displays with consideration of speckle contrast, resolution, and depth of field](https://www.nature.com/articles/s41598-020-75947-0) (*Lee et al. 2020 | Scientific Reports, Nature*)
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (*Moon et al. 2014 | Optics Express, Optica*)
 
