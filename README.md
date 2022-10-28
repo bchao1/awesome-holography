@@ -105,10 +105,12 @@ These works often assume a naive wave propagation model (i.e. the angular spectr
 ## Holographic Display Architectures, Optics, and Systems
 
 Most CGH display frameworks use coherent light source (laser) and a single phase-only SLM. The following works explore alternatives to the current paradigm, such as using partially-coherent light sources, amplitude SLMs, and adding additional optical elements.
-   
+
+<!-- Reducing speckle noise: 1. Superposition 2. Spatial coherence construction 3. Temporal (spectral) coherence destruction -->
 Partial coherence (in a general sense) are often deployed to reduce speckle artifacts:
-- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (*Peng et al. 2021 | Science Advaces, Science*) uses partially coherent light sources (i.e. LED) and camera-in-the-loop optimization to reduce speckle artifacts.
 - [High‐contrast, speckle‐free, true 3D holography via binary CGH optimization](https://www.nature.com/articles/s41598-022-06405-2#Sec15)(*Lee et al. 2022 | Scientific Reports, Nature*) leveraged time-multiplexing of random phase, amplitude only SLMs to reduce speckle noise.
+- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (*Peng et al. 2021 | Science Advaces, Science*) uses partially coherent light sources (i.e. LED) and camera-in-the-loop optimization to reduce speckle artifacts.
+- [DCGH: Dynamic Computer Generated Holography for Speckle-Free, High Fidelity 3D Displays](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9417658)(*Curtis et al. 2021 | IEEE, VR*)
 - [Light source optimization for partially coherent holographic displays with consideration of speckle contrast, resolution, and depth of field](https://www.nature.com/articles/s41598-020-75947-0) (*Lee et al. 2020 | Scientific Reports, Nature*)
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (*Moon et al. 2014 | Optics Express, Optica*)
 
@@ -117,7 +119,6 @@ Special optical elements are used to improve the holographic display quality:
 - [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (*Cakmakci et al. 2021 | Optics Express, Optica*)
 - [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/) (*Jang et al. 2020 | SIGGRAPH Asia, ACM*)
 - [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (*Gao et al. 2016 | Optics Express, Optica*)
-- [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (*Choi et al. 2021 | Optica, Optica*)
 - [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (*Jang et al. 2017 | SIGGRAPH Asia, ACM*)
 - [Holographic display for see-through augmented reality using mirror-lens holographic optical element](https://opg.optica.org/ol/abstract.cfm?uri=ol-41-11-2486) (*Li et al. 2016 | Optics Letters, Optica*)
 - [3D holographic head mounted display using holographic optical elements with astigmatism aberration compensation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-25-32025&id=333174) (*Yeom et al. 2015 | Optics Express, Optica*)
