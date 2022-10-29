@@ -11,13 +11,17 @@ This list is compiled during my paper survey about holographic displays, and is 
 
 ## Table of Contents
 - [Background, Theory, and Survey](#background-theory-and-survey)
-- [Computer Generated Holography (CGH)](#computer-generated-holography-cgh)
+- [Computer Generated Holography (CGH) Algorithms](#computer-generated-holography-cgh-algorithms)
     - [Traditional Heuristic Methods](#traditional-heuristic-methods)
     - [Iterative Methods](#iterative-methods)
     - [Learned Propagation Model Methods](#learned-propagation-model-methods)
     - [Learned Hologram Synthesis Methods](#learned-hologram-synthesis-methods)
-- [Holographic Display Architectures, Optics, and Systems](#holographic-display-architectures-optics-and-systems)
-- [Etendue, Eyebox, Pupil Related](#etendue-eyebox-pupil-related)
+- [Topics in Holography Display Systems](#topics-in-holographic-display-systems)
+    - [Speckle Noise Reduction](#speckle-noise-reduction)
+    - [Etendue Expansion](#etendue-expansion)
+    - [Holographic Optical Elements (HOEs)](#holographic-optical-elements-hoes)
+    - [Small Form-factor Displays](#small-form-factor-displays)
+    - [Compression](#compression)
 - [Labs and Researchers](#labs-and-researchers)
 - [Talks, Lectures, and Tutorials](#talks-lectures-and-tutorials)
 
@@ -30,19 +34,22 @@ This list is compiled during my paper survey about holographic displays, and is 
 - [Toward the next-generation VR/AR optics: a review of holographic near-eye displays from a human-centric perspective](https://opg.optica.org/optica/fulltext.cfm?uri=optica-7-11-1563&id=442336) (*Chang et al. 2020 | Optica, Optica*)
 - [Deep learning in holography and coherent imaging](https://www.nature.com/articles/s41377-019-0196-0) (*Rivenson et al. 2019 | Light: Science and Applications, Nature*)
 
-## Computer Generated Holography (CGH)
+## Computer Generated Holography (CGH) Algorithms
+
+This section mainly focuses on the algorithmic aspect of holographic display systems.
 
 ### Traditional Heuristic Methods
 
 #### Point-based Methods
 
-Some methods are based on the double phase encoding scheme, where two phase-only modulation patterns are interleaved on a single SLM:
+Some methods are based on the double phase/amplitude encoding scheme, where two phase/amplitude-only modulation patterns are interleaved on a single SLM:
 
 - [Computer-generated double-phase holograms](https://opg.optica.org/ao/abstract.cfm?uri=ao-17-24-3874) (*Hsueh et al. 1978 | Applied Optics, Optica*) proposed to decompose a complex field into two phase-only components to generate holograms using a single phase-only SLM.
 - [Holographic Near-Eye Displays for Virtual and Augmented Reality](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/holo_author.pdf) (*Maimone et al. 2017 | Transactions on Graphics (TOG), ACM*) proposed a holographic near-eye display system based on the double phase encoding scheme.
+- [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (*Gao et al. 2016 | Optics Express, Optica*)
 
 Others methods include:
-- [Near-eye Light Field Holographic Rendering with Spherical Waves for Wide Field of View Interactive 3D Computer Graphics](https://people.csail.mit.edu/liangs/papers/ToG17.pdf) (*Shi et al. 2017 | Transactions on Graphics (TOG), ACM*)
+- [Near-eye Light Field Holographic Rendering with Spherical Waves for Wide Field of View Interactive 3D Computer Graphics](https://people.csail.mit.edu/liangs/papers/ToG17.pdf) (*Shi et al. 2017 | Transactions on Graphics (TOG), ACM*) uses point-source illumination rather than plane-wave illumination to improve the FOV of holograhic displays.
 
 #### Polygon/Mesh-based Methods
 - [Computer-generated holograms of 3-D objects composed of tilted planar segments](https://opg.optica.org/ao/abstract.cfm?uri=ao-27-14-3020) (*Leseberg et al. 1988 | Applied Optics, Optica*)
@@ -76,12 +83,13 @@ Other optimization based methods leverage gradient descent or non-convex optimiz
 - [Accommodative Holography: Improving Accommodation Response for Perceptually Realistic Holographic Displays](https://drive.google.com/drive/folders/1K0DfdG75kcz_xU6BF9PDwzevhp1t_UmO) (*Kim et al. 2022 | SIGGRAPH, ACM*) analyzed the user accomodation performance when using different CGH methods and proposed a novel constrast ratio-based regularization loss that promotes better accomodation cues.
 - [Metameric Varifocal Holograms](https://github.com/complight/metameric_holography) (*Walton et al. 2022 | VR, IEEE*) proposed a foveated graphics-inspired, gaze-contingent loss function that can be easily integrated into CGH optimization loops.
 - [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428) (*Chakravarthula et al. 2022 | SIGGRAPH, ACM*)
+- [Optimization of computer-generated holograms featuring phase randomness control](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-19-4769&id=459763)(*Yoo et al. | Optics Express, Optica*) leveraged a learned DPAC encoding optimized using gradinet descent to promote phase randomness, which in turn increases the space-bandwidth product of the display system.
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (*Chen et al. 2021 | Optics Express, Optica*)
 - [Realistic Defocus Blur for Multiplane Computer-Generated Holography](https://arxiv.org/abs/2205.07030) (*Kavaklı et al. 2021*) proposed a novel loss function aimed to synthesize high quality defocus blur, and can be intergated in various iterative (GS, gradient-descent) and non-iterative (double phase encoding) methods. 
 - [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (*Chakravarthula et al. 2019 | SIGGRAPH Asia, ACM*) optimizes the phase-only SLM pattern using closed-form Wirtinger complex derivatives in gradient descent.
 - [3D computer-generated holography by non-convex optimization](https://opg.optica.org/optica/fulltext.cfm?uri=optica-4-10-1306&id=375391) (*Zhang et al. 2017 | Optica, Optica*)
    
-Unfortunately, iterative methods are inherently slow and thus not suitble for real-time CGH.
+Unfortunately, iterative methods are inherently slow and thus not suitble for real-time CGH. See [this section](#learned-hologram-synthesis-methods) for speeding up hologram synthesis using neural networks.
 
 ### Learned Propagation Model Methods
 There are often mismatches between a ideal wave propagation model (e.g. ASM) with the actual physical display setup. A major focus in deep learning for CGH is using camera-in-the-loop (CITL) training to learn an accurate free space wave propagation and optical hardware model for holographic displays:
@@ -102,41 +110,43 @@ These works often assume a naive wave propagation model (i.e. the angular spectr
 - [Deep-learning-generated holography](https://opg.optica.org/ao/abstract.cfm?uri=ao-57-14-3859) (*Horisaki et al. 2018 | Applied Optics, Optica*)
 - [Phase recovery and holographic image reconstruction using deep learning in neural networks](https://www.nature.com/articles/lsa2017141) (*Rivenson et al. 2018 | Light: Science and Applications, Nature*)
 
-## Holographic Display Architectures, Optics, and Systems
-
-Most CGH display frameworks use coherent light source (laser) and a single phase-only SLM. The following works explore alternatives to the current paradigm, such as using partially-coherent light sources, amplitude SLMs, and adding additional optical elements.
+## Topics in Holographic Display Systems
 
 <!-- Reducing speckle noise: 1. Superposition 2. Spatial coherence construction 3. Temporal (spectral) coherence destruction -->
-Partial coherence (in a general sense) are often deployed to reduce speckle artifacts:
-- [High‐contrast, speckle‐free, true 3D holography via binary CGH optimization](https://www.nature.com/articles/s41598-022-06405-2#Sec15)(*Lee et al. 2022 | Scientific Reports, Nature*) leveraged time-multiplexing of random phase, amplitude only SLMs to reduce speckle noise.
-- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (*Peng et al. 2021 | Science Advaces, Science*) uses partially coherent light sources (i.e. LED) and camera-in-the-loop optimization to reduce speckle artifacts.
-- [DCGH: Dynamic Computer Generated Holography for Speckle-Free, High Fidelity 3D Displays](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9417658)(*Curtis et al. 2021 | IEEE, VR*)
+### Speckle Noise Reduction
+Speckle noise is a result of interference among coherent waves, which is often present in holographic images since holographic displays use coherent laser sources. Methods for reducing speckle noise can roughly be catergorized into the following:
+#### Time-averaging
+- [High‐contrast, speckle‐free, true 3D holography via binary CGH optimization](https://www.nature.com/articles/s41598-022-06405-2#Sec15)(*Lee et al. 2022 | Scientific Reports, Nature*) optimized random phase, amplitude only SLMs using gradient descent and time-averaged them to reduce speckle noise.
+- [DCGH: Dynamic Computer Generated Holography for Speckle-Free, High Fidelity 3D Displays](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9417658)(*Curtis et al. 2021 | IEEE, VR*) simultaneously optimizes multiple binary, amplitude only SLMs in a modified Gerchberg-Saxton (GS) algorithm and time-averages them to reduce speckle noise.
+#### Partially-coherent Light Sources
+- [Speckle-free holography with partially coherent light sources and camera-in-the-loop calibration](https://www.computationalimaging.org/publications/partiallycoherentholography/) (*Peng et al. 2021 | Science Advaces, Science*) uses partially coherent light sources (i.e. LED) and camera-in-the-loop optimization to reduce speckle noise.
 - [Light source optimization for partially coherent holographic displays with consideration of speckle contrast, resolution, and depth of field](https://www.nature.com/articles/s41598-020-75947-0) (*Lee et al. 2020 | Scientific Reports, Nature*)
 - [Holographic head-mounted display with RGB light emitting diode light source](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-6-6526&id=281866) (*Moon et al. 2014 | Optics Express, Optica*)
-
-Special optical elements are used to improve the holographic display quality:
+#### Others
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (*Choi et al. 2021 | Optica, Optica*) uses 2 SLMs to correct for the unwanted interference caused by undiffracted light in single-SLM settings. A CITL procedure is also deployed to simultaneously optimize 2 SLM patterns.
-- [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (*Cakmakci et al. 2021 | Optics Express, Optica*)
-- [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/) (*Jang et al. 2020 | SIGGRAPH Asia, ACM*)
-- [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (*Gao et al. 2016 | Optics Express, Optica*)
-- [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (*Jang et al. 2017 | SIGGRAPH Asia, ACM*)
-- [Holographic display for see-through augmented reality using mirror-lens holographic optical element](https://opg.optica.org/ol/abstract.cfm?uri=ol-41-11-2486) (*Li et al. 2016 | Optics Letters, Optica*)
-- [3D holographic head mounted display using holographic optical elements with astigmatism aberration compensation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-25-32025&id=333174) (*Yeom et al. 2015 | Optics Express, Optica*)
-   
-Bulky headsets hamper the development of AR/VR. **Reducing the size** of holographic displays are important:
-- [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (*Kim et al. 2022 | SIGGRAPH, ACM*) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
-- [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (*Maimone et al. 2021 | SIGGRAPH, ACM*)
-- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968)(*Gopakumar et al. 2021 | Optics Letters, Optica*)
-   
-**CGH compression** is also important for deploying holography technology on edge devices:
-- [Joint Neural Phase Retrieval and Compression for Energy- and Computation-efficient Holography on the Edge](https://www.immersivecomputinglab.org/publication/joint-neural-phase-retrieval-and-compression-for-energy-and-computation-efficient-holography-on-the-edge/) (*Wang et al. 2022 | SIGGRAPH, ACM*)
 
-
-## Etendue, Eyebox, Pupil Related
+### Etendue Expansion
 - [Pupil-aware Holography](https://arxiv.org/pdf/2203.14939.pdf) (*Chakravarthula et al. 2022*)
 - [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123) (*Baek et al. 2022*)
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (*Kuo et al. 2020 | SIGGRAPH, ACM*)
 - [Holographic Near-eye Display with Expanded Eye-box](https://dl.acm.org/doi/10.1145/3272127.3275069) (*Jang et al. 2018 | Transactions on Graphics (TOG), ACM*)
+
+### Holographic Optical Elements (HOEs)
+- [Design and Fabrication of Freeform Holographic Optical Elements](https://research.facebook.com/publications/design-and-fabrication-of-freeform-holographic-optical-elements/) (*Jang et al. 2020 | SIGGRAPH Asia, ACM*)
+- [Retinal 3D: augmented reality near-eye display via pupil-tracked light field projection on retina](https://dl.acm.org/doi/10.1145/3130800.3130889) (*Jang et al. 2017 | SIGGRAPH Asia, ACM*)
+- [Holographic display for see-through augmented reality using mirror-lens holographic optical element](https://opg.optica.org/ol/abstract.cfm?uri=ol-41-11-2486) (*Li et al. 2016 | Optics Letters, Optica*)
+- [3D holographic head mounted display using holographic optical elements with astigmatism aberration compensation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-25-32025&id=333174) (*Yeom et al. 2015 | Optics Express, Optica*)
+   
+### Small Form-factor Displays
+Bulky headsets hamper the development of AR/VR. **Reducing the size** of holographic displays are important:
+- [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (*Kim et al. 2022 | SIGGRAPH, ACM*) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
+- [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (*Cakmakci et al. 2021 | Optics Express, Optica*)
+- [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (*Maimone et al. 2021 | SIGGRAPH, ACM*)
+- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968)(*Gopakumar et al. 2021 | Optics Letters, Optica*) incorporated higher diffraction orders into the CGH optimization procedure to remove the 4f filtering system often used in holographic displays, thus reducing the display form factor.
+   
+### Compression
+**CGH compression** is also important for deploying holography technology on edge devices:
+- [Joint Neural Phase Retrieval and Compression for Energy- and Computation-efficient Holography on the Edge](https://www.immersivecomputinglab.org/publication/joint-neural-phase-retrieval-and-compression-for-energy-and-computation-efficient-holography-on-the-edge/) (*Wang et al. 2022 | SIGGRAPH, ACM*)
 
 ## Labs and Researchers
 - [Computational Imaging Lab, Stanford University](https://www.computationalimaging.org)
