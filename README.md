@@ -1,6 +1,6 @@
 # awesome-holography
 
-A curated list of resources on holographic displays, inspired by [awesome-computer-vision](https://github.com/jbhuang0604/awesome-computer-vision).
+A curated list of resources on holographic displays.
 
 ## Disclaimer
 
@@ -80,12 +80,16 @@ A family of iterative methods is based on the **Gerchberg-Saxton (GS) Algorithm*
 
 Other optimization based methods leverage gradient descent or non-convex optimization techniques to optimize the phase pattern of the SLM:
 
+#### Perceptual-driven loss designs
 - [Accommodative Holography: Improving Accommodation Response for Perceptually Realistic Holographic Displays](https://drive.google.com/drive/folders/1K0DfdG75kcz_xU6BF9PDwzevhp1t_UmO) (*Kim et al. 2022 | SIGGRAPH, ACM*) analyzed the user accomodation performance when using different CGH methods and proposed a novel constrast ratio-based regularization loss that promotes better accomodation cues.
-- [Metameric Varifocal Holograms](https://github.com/complight/metameric_holography) (*Walton et al. 2022 | VR, IEEE*) proposed a foveated graphics-inspired, gaze-contingent loss function that can be easily integrated into CGH optimization loops.
+- [Metameric Varifocal Holograms](https://github.com/complight/metameric_holography) (*Walton et al. 2022 | VR, IEEE*) proposed a foveated graphics-inspired, gaze-contingent loss function that can be easily integrated into CGH optimization. The loss enforces the defocus image regions to only statistically match the defocus target image regions rather than pixel-wise reconstruction. This increases the degrees of freedom for the hologram to distribute light (compared to fitting a focal stack), thus reducing speckle artifacts. 
+- [Realistic Defocus Blur for Multiplane Computer-Generated Holography](https://arxiv.org/abs/2205.07030) (*Kavaklı et al. 2021*) proposed a novel loss function aimed to synthesize high quality defocus blur, and can be intergated in various iterative (GS, gradient-descent) and non-iterative (double phase encoding) methods. 
+- [Gaze-Contingent Retinal Speckle Suppression for Perceptually-Matched Foveated Holographic Displays](https://www.computer.org/csdl/journal/tg/2021/11/09523842/1wpqr1B6wA8) (*Chakravarthula et al. 2021 | TVCG, IEEE*)
+
+### Others
 - [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428) (*Chakravarthula et al. 2022 | SIGGRAPH, ACM*)
 - [Optimization of computer-generated holograms featuring phase randomness control](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-19-4769&id=459763) (*Yoo et al. | Optics Express, Optica*) leveraged a learned DPAC encoding optimized using gradinet descent to promote phase randomness, which in turn increases the space-bandwidth product of the display system.
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (*Chen et al. 2021 | Optics Express, Optica*)
-- [Realistic Defocus Blur for Multiplane Computer-Generated Holography](https://arxiv.org/abs/2205.07030) (*Kavaklı et al. 2021*) proposed a novel loss function aimed to synthesize high quality defocus blur, and can be intergated in various iterative (GS, gradient-descent) and non-iterative (double phase encoding) methods. 
 - [Wirtinger Holography for Near-Eye Displays](https://www.cs.princeton.edu/~fheide/wirtingerholography) (*Chakravarthula et al. 2019 | SIGGRAPH Asia, ACM*) optimizes the phase-only SLM pattern using closed-form Wirtinger complex derivatives in gradient descent.
 - [3D computer-generated holography by non-convex optimization](https://opg.optica.org/optica/fulltext.cfm?uri=optica-4-10-1306&id=375391) (*Zhang et al. 2017 | Optica, Optica*)
    
@@ -142,7 +146,7 @@ Bulky headsets hamper the development of AR/VR. **Reducing the size** of hologra
 - [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (*Kim et al. 2022 | SIGGRAPH, ACM*) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
 - [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (*Cakmakci et al. 2021 | Optics Express, Optica*)
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (*Maimone et al. 2021 | SIGGRAPH, ACM*)
-- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968) (*Gopakumar et al. 2021 | Optics Letters, Optica*) incorporated higher diffraction orders into the CGH optimization procedure to remove the 4f filtering system often used in holographic displays, thus reducing the display form factor.
+- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968) g(*Gopakumar et al. 2021 | Optics Letters, Optica*) incorporated higher diffraction orders into the CGH optimization procedure to remove the 4f filtering system often used in holographic displays, thus reducing the display form factor.
    
 ### Compression
 **CGH compression** is also important for deploying holography technology on edge devices:
