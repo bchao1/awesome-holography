@@ -22,6 +22,7 @@ This list is compiled during my paper survey about holographic displays, and is 
     - [Holographic Optical Elements (HOEs)](#holographic-optical-elements-hoes)
     - [Small Form-factor Displays](#small-form-factor-displays)
     - [Compression](#compression)
+    - [Zero or Higher Diffraction Orders Optimization](#zero-or-high-diffraction-orders-optimization)
 - [Labs and Researchers](#labs-and-researchers)
 - [Talks, Lectures, and Tutorials](#talks-lectures-and-tutorials)
 
@@ -42,13 +43,9 @@ This section mainly focuses on the algorithmic aspect of holographic display sys
 
 #### Point-based Methods
 
-Some methods are based on the double phase/amplitude encoding scheme, where two phase/amplitude-only modulation patterns are interleaved on a single SLM:
-
 - [Computer-generated double-phase holograms](https://opg.optica.org/ao/abstract.cfm?uri=ao-17-24-3874) (*Hsueh et al. 1978 | Applied Optics, Optica*) proposed to decompose a complex field into two phase-only components to generate holograms using a single phase-only SLM.
 - [Holographic Near-Eye Displays for Virtual and Augmented Reality](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/holo_author.pdf) (*Maimone et al. 2017 | Transactions on Graphics (TOG), ACM*) proposed a holographic near-eye display system based on the double phase encoding scheme.
 - [Monocular 3D see-through head-mounted display via complex amplitude modulation](https://opg.optica.org/oe/fulltext.cfm?uri=oe-24-15-17372&id=348011) (*Gao et al. 2016 | Optics Express, Optica*)
-
-Others methods include:
 - [Near-eye Light Field Holographic Rendering with Spherical Waves for Wide Field of View Interactive 3D Computer Graphics](https://people.csail.mit.edu/liangs/papers/ToG17.pdf) (*Shi et al. 2017 | Transactions on Graphics (TOG), ACM*) uses point-source illumination rather than plane-wave illumination to improve the FOV of holograhic displays.
 
 #### Polygon/Mesh-based Methods
@@ -86,7 +83,7 @@ Other optimization based methods leverage gradient descent or non-convex optimiz
 - [Realistic Defocus Blur for Multiplane Computer-Generated Holography](https://arxiv.org/abs/2205.07030) (*Kavaklı et al. 2021*) proposed a novel loss function aimed to synthesize high quality defocus blur, and can be intergated in various iterative (GS, gradient-descent) and non-iterative (double phase encoding) methods. 
 - [Gaze-Contingent Retinal Speckle Suppression for Perceptually-Matched Foveated Holographic Displays](https://www.computer.org/csdl/journal/tg/2021/11/09523842/1wpqr1B6wA8) (*Chakravarthula et al. 2021 | TVCG, IEEE*)
 
-### Others
+#### Others
 - [Hogel-free Holography](https://dl.acm.org/doi/pdf/10.1145/3516428) (*Chakravarthula et al. 2022 | SIGGRAPH, ACM*)
 - [Optimization of computer-generated holograms featuring phase randomness control](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-19-4769&id=459763) (*Yoo et al. | Optics Express, Optica*) leveraged a learned DPAC encoding optimized using gradinet descent to promote phase randomness, which in turn increases the space-bandwidth product of the display system.
 - [Multi-depth hologram generation using stochastic gradient descent algorithm with complex loss function](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-10-15089&id=450644) (*Chen et al. 2021 | Optics Express, Optica*)
@@ -102,13 +99,13 @@ There are often mismatches between a ideal wave propagation model (e.g. ASM) wit
 - [Neural 3D Holography: Learning Accurate Wave Propagation Models for 3D Holographic Virtual and Augmented Reality Displays](https://www.computationalimaging.org/publications/neuralholography3d/) (*Choi et al. 2021 | SIGGRAPH Asia, ACM*) uses two CNNs to directly model optical aberrations, SLM non-linearities, and etc, at the input plane and **multiple** target planes. The usage of two CNNs introduces more degrees of freedom than that of the parameterized propagation model proposed in Peng et al. 2020, such that higher quality 3D holograms can be achieved.
 - [Time-multiplexed Neural Holography: A Flexible Framework for Holographic Near-eye Displays with Fast Heavily-quantized Spatial Light Modulators](https://www.computationalimaging.org/publications/time-multiplexed-neural-holography/) (*Choi et al. 2022 | SIGGRAPH, ACM*) leveraged time-multiplexed quantized SLM patterns to synthesize high quality defocus blur. 
 - [Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays](https://light.princeton.edu/publication/hil-holography/) (*Chakravarthula et al. 2020 | SIGGGRAPH Asia, ACM*) uses CITL to learn an aberration approximator that models the residual between holograms generated from ideal wave propagation (i.e. ASM) and real-world wave propagation models. An adversarial loss is used in addition to reconstruction loss to optimize the synthesized holograms.
-   
-Instead of using a predetermined convolution kernel to compute wave propagation (i.e. the angular spectrum method), [Learned holographic light transport](https://opg.optica.org/ao/abstract.cfm?uri=ao-61-5-b50) (*Kavaklı et al. 2021 | Applied Optics, Optica*) learns the wave propagation convolution kernel directly from images captured by a physical holographic display.
+- [Learned holographic light transport](https://opg.optica.org/ao/abstract.cfm?uri=ao-61-5-b50) (*Kavaklı et al. 2021 | Applied Optics, Optica*) learns the wave propagation convolution kernel directly from images captured by a physical holographic display, instead of using the ASM method to propagate fields.
 
 ### Learned Hologram Synthesis Methods
 These works often assume a naive wave propagation model (i.e. the angular spectrum method (ASM)), and directly regresses complex holograms using novel CNN architectures:
 - [End-to-end Learning of 3D Phase-only Holograms for Holographic Display](http://cgh-v2.csail.mit.edu) (*Liang et al. 2022 | Light: Science and Applications, Nature*) 
 - [Towards real-time photorealistic 3D holography with deep neural networks](https://cdfg.mit.edu/publications/tensor-holography) (*Liang et al. 2021 | Nature, Nature*) 
+- [Diffraction-engineered holography: Beyond the depth representation limit of holographic displays](https://www.nature.com/articles/s41467-022-33728-5) (*Yang et al. 2022 | Nature Communications, Nature*)
 - [DeepCGH: 3D computer-generated holography using deep learning](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-26636&id=437573) (*Eybposh et al. 2020 | Optics Express, Optica*) uses a CNN to estimate a complex field at a fixed plane from a set of 3D target multiplane inputs; the complex field is then reverse propagated to the SLM plane to generate a phase pattern.
 - [Deep neural network for multi-depth hologram generation and its training strategy](https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-18-27137&id=437709) (*Lee et al. 2020 | Optics Express, Optica*) directly estimates the SLM phase pattern from 3D target multiplane inputs using a CNN.
 - [Deep-learning-generated holography](https://opg.optica.org/ao/abstract.cfm?uri=ao-57-14-3859) (*Horisaki et al. 2018 | Applied Optics, Optica*)
@@ -118,6 +115,8 @@ These works often assume a naive wave propagation model (i.e. the angular spectr
 
 <!-- Reducing speckle noise: 1. Superposition 2. Spatial coherence construction 3. Temporal (spectral) coherence destruction -->
 ### Speckle Noise Reduction
+- [Strategies for reducing speckle noise in digital holography](https://www.nature.com/articles/s41377-018-0050-9) (*Bianco et al. 2018 | Light: Sciene and Applications, Nature*)
+
 Speckle noise is a result of interference among coherent waves, which is often present in holographic images since holographic displays use coherent laser sources. Methods for reducing speckle noise can roughly be catergorized into the following:
 #### Time-averaging
 - [High‐contrast, speckle‐free, true 3D holography via binary CGH optimization](https://www.nature.com/articles/s41598-022-06405-2#Sec15) (*Lee et al. 2022 | Scientific Reports, Nature*) optimized random phase, amplitude only SLMs using gradient descent and time-averaged them to reduce speckle noise.
@@ -130,6 +129,8 @@ Speckle noise is a result of interference among coherent waves, which is often p
 - [Optimizing image quality for holographic near-eye displays with Michelson Holography](https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-2-143&id=446984) (*Choi et al. 2021 | Optica, Optica*) uses 2 SLMs to correct for the unwanted interference caused by undiffracted light in single-SLM settings. A CITL procedure is also deployed to simultaneously optimize 2 SLM patterns.
 
 ### Etendue Expansion
+The product of the field of view (FoV) and the eyebox size, the etendue, is limited by the number of pixels on the SLM. Hence, there is an inherent tradeoff between these two properties.
+
 - [Pupil-aware Holography](https://arxiv.org/pdf/2203.14939.pdf) (*Chakravarthula et al. 2022*)
 - [Neural Etendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display](https://arxiv.org/abs/2109.08123) (*Baek et al. 2022*)
 - [High Resolution étendue expansion for holographic displays](https://dl.acm.org/doi/abs/10.1145/3386569.3392414) (*Kuo et al. 2020 | SIGGRAPH, ACM*)
@@ -146,11 +147,18 @@ Bulky headsets hamper the development of AR/VR. **Reducing the size** of hologra
 - [Holographic Glasses for Virtual Reality](https://research.nvidia.com/publication/2022-08_holographic-glasses-virtual-reality) (*Kim et al. 2022 | SIGGRAPH, ACM*) presents a holographic display system with eyeglasses-like form factor. An optical stack of 2.5mm is achieved by combining pupil-replicating waveguide, SLMs, and geometric phase lenses.
 - [Holographic pancake optics for thin and lightweight optical see-through augmented reality](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-22-35206&id=460506) (*Cakmakci et al. 2021 | Optics Express, Optica*)
 - [Holographic Optics for Thin and Lightweight Virtual Reality](https://research.facebook.com/publications/holographic-optics-for-thin-and-lightweight-virtual-reality/) (*Maimone et al. 2021 | SIGGRAPH, ACM*)
-- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968) g(*Gopakumar et al. 2021 | Optics Letters, Optica*) incorporated higher diffraction orders into the CGH optimization procedure to remove the 4f filtering system often used in holographic displays, thus reducing the display form factor.
    
 ### Compression
 **CGH compression** is also important for deploying holography technology on edge devices:
 - [Joint Neural Phase Retrieval and Compression for Energy- and Computation-efficient Holography on the Edge](https://www.immersivecomputinglab.org/publication/joint-neural-phase-retrieval-and-compression-for-energy-and-computation-efficient-holography-on-the-edge/) (*Wang et al. 2022 | SIGGRAPH, ACM*)
+- [Neural compression for hologram images and videos](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X-FQZ8QAAAAJ&sortby=pubdate&citation_for_view=X-FQZ8QAAAAJ:3fE2CSJIrl8C)(*Shi et al. 2022 | Optics Letters, Optica*)
+
+### Zero or Higher Diffraction Orders Optimization
+- [Unfiltered holography: optimizing high diffraction orders without optical filtering for compact holographic displays](https://opg.optica.org/ol/fulltext.cfm?uri=ol-46-23-5822&id=464968) g(*Gopakumar et al. 2021 | Optics Letters, Optica*) incorporated higher diffraction orders into the CGH optimization procedure to remove the 4f filtering system often used in holographic displays, thus reducing the display form factor.
+- Elimination of a zero-order beam induced by a pixelated spatial light modulator for holographic projection (*Zhang et al. 2009 | Applied Optics, Optica*)
+- Holographic projection of arbitrary light patterns with a suppressed zero-order beam
+- Effect of spurious diffraction orders in arbitrary multifoci patterns produced via phase-only holograms
+- Off-axis camera-in-the-loop optimization with noise reduction strategy for high-quality hologram generation (*Chen et al. 2022 | Optics Letters, Optica*)
 
 ## Labs and Researchers
 - [Computational Imaging Lab, Stanford University](https://www.computationalimaging.org)
